@@ -7,19 +7,23 @@ body
 {
 	width:250px;
 }
-	#container span
+	#container ul
 	{
-		width:25px;
-		height:20px;
-		padding:3px 0px 0px 0px;
-		text-align:center;
-		float:left;
-		border:#FFF 1px solid;
-		cursor:pointer;
+		list-style:none;
 	}
-	#container span:hover
-	{
-		background: #ebebeb -webkit-linear-gradient(#fefefe, #f8f8f8 70%, #e9e9e9);
-		border-color: #BEBEBE;
-		color: #222;
-	}
+		#container ul li
+		{
+			width:25px;
+			height:20px;
+			padding:3px 0px 0px 0px;
+			text-align:center;
+			float:left;
+			border:#FFF 1px solid;
+			cursor:pointer;
+		}
+		#container ul li:hover
+		{
+			background: #ebebeb -webkit-linear-gradient(#fefefe, #f8f8f8 70%, #e9e9e9);
+			border-color: #BEBEBE;
+			color: #222;
+		}
