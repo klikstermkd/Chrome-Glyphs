@@ -20,7 +20,7 @@
 	
 	"permissions": 
 	[
-		"contextMenus"
+		"tabs","contextMenus"
 	],
 	
 	"content_scripts": 
@@ -28,8 +28,7 @@
 		{
 			"matches": ["<all_urls>", "https://*/*"], 
 			"js": ["js/content.js"],
-			"all_frames": true,
-			"run_at": "document_end"
+			"all_frames": true
 		}
 	]
 }
