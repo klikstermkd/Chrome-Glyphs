@@ -14,7 +14,8 @@
  * Defining main popup variables
  * -----------------------------------------------------------------------------
 */
-    var cont = document.getElementById("container"),
+    var debug = true,
+        cont = document.getElementById("container"),
         clipboard = document.getElementById('clipboard'),
 	dbGlyphs = JSON.parse(localStorage.getItem("glyphs"));
 
@@ -86,7 +87,7 @@ function copy(glyph)
 */
 (function()
 {
-    if(dbGlyphs == null || dbGlyphs === undefined)
+    if(dbGlyphs == null || dbGlyphs === undefined || debug)
     {
         localStorage.setItem("glyphs", JSON.stringify(glyphs));
 	dbGlyphs = JSON.parse(localStorage.getItem("glyphs"));
