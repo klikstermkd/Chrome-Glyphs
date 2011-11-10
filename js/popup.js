@@ -14,7 +14,9 @@
  * Defining main popup variables
  * -----------------------------------------------------------------------------
 */
-    var cont = document.getElementById("container");
+    var cont = document.getElementById("container"),
+        clipboard = document.getElementById('clipboard'),
+	dbGlyphs = JSON.parse(localStorage.getItem("glyphs"));
 
 /*
  * -----------------------------------------------------------------------------
@@ -53,8 +55,42 @@ function send_glyph(glyph)
 {
     chrome.tabs.getSelected(null, function(tab)
     {
-        chrome.tabs.sendRequest(tab.id, {glyph: glyph});
+        chrome.tabs.sendRequest(tab.id, {glyph: glyph},function(response)
+        {
+            if(response.action == 'copy')
+            {
+                copy(response.glyph);
+            }
+        });
     });
 }
 
-generate(glyphs);
+/*
+ * -----------------------------------------------------------------------------
+ * Copy function - copyies choosen glyph if no input element is selected
+ * -----------------------------------------------------------------------------
+*/
+function copy(glyph)
+{
+    clipboard.value = glyph;					
+    clipboard.focus();
+    clipboard.select();
+    document.execCommand('Copy');
+    document.getElementById("copyied").style.display = 'block'; 
+}
+
+/*
+ * -----------------------------------------------------------------------------
+ * Load main functions & initialize localstorage glyphs
+ * -----------------------------------------------------------------------------
+*/
+(function()
+{
+    if(dbGlyphs == null || dbGlyphs === undefined)
+    {
+        localStorage.setItem("glyphs", JSON.stringify(glyphs));
+	dbGlyphs = JSON.parse(localStorage.getItem("glyphs"));
+    }
+    
+    generate(dbGlyphs); //generate glyphs emelements
+})();
