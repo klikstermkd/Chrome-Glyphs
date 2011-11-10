@@ -27,3 +27,11 @@ body
 			border-color: #BEBEBE;
 			color: #222;
 		}
+#copyied
+{
+	display:none;
+}
+#clipboard
+{
+	opacity:-1;
+}

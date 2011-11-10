@@ -1,4 +1,5 @@
-chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+chrome.extension.onRequest.addListener(function(request, sender, sendResponse)
+{
 	
 	var focusEl = window.top.document.activeElement;
 	var text	= request.glyph;
@@ -15,5 +16,9 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
 		// update current position
 		focusEl.setSelectionRange(startPos + text.length, startPos + text.length);
 		
+	}
+	else
+	{
+		sendResponse({action: "copy",glyph:text});	
 	}
 });
