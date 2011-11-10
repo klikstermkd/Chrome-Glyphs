@@ -3,7 +3,6 @@
 	"version": "0.1",
 	"default_locale": "en",
 	"description": "__MSG_desc__",
-	"background_page": "glyphs.html",
 	"options_page": "options.html",
 	"icons": 
 	{ 
