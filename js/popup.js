@@ -16,8 +16,9 @@
 */
     var debug = true,
         cont = document.getElementById("container"),
+        copied = document.getElementById("copyied"),
         clipboard = document.getElementById('clipboard'),
-	dbGlyphs = JSON.parse(localStorage.getItem("glyphs"));
+        dbGlyphs = JSON.parse(localStorage.getItem("glyphs"));
 
 /*
  * -----------------------------------------------------------------------------
@@ -77,7 +78,8 @@ function copy(glyph)
     clipboard.focus();
     clipboard.select();
     document.execCommand('Copy');
-    document.getElementById("copyied").style.display = 'block'; 
+    copied.style.display = "block";
+    timeout = setTimeout(function(){copied.style.display = "none";},3000)
 }
 
 /*

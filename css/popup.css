@@ -1,13 +1,14 @@
 body
 {
-	padding:5px;
-	text-shadow:0 0 1px rgba(0, 0, 0, 0.01);
+	padding:4px;
 }
+
 #container
 {
 	width:260px;
 	height:200px;
 	overflow:auto;
+	display:inline-block;
 }
 	#container ul
 	{
@@ -31,10 +32,22 @@ body
 		}
 #copyied
 {
+	padding:5px;
 	display:none;
+	color:#2E74B2;
+	text-align:center;
+	border-radius: 5px;
+	background:#E4EDF5;
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size:12px;
+	border:#D8E1E9 1px solid;
+	margin:0px auto 0px auto;
 }
+
 #clipboard
 {
+	top:-40px;
 	opacity:-1;
 	position:absolute;
 	z-index:-1;
@@ -49,24 +62,23 @@ body
 	box-shadow: 0 0 1px 0 rgba(0,0,0,.15) inset,0 1px 0 0 #fff;
 	background-color: #E5E5E5;
 }
-.custom-scroll-bar::-webkit-scrollbar, .custom-scroll-bar::-webkit-scrollbar-thumb 
-{
-	overflow: visible;
-	border-radius: 4px;
-	border: solid 1px #A6A6A6;
-	border-image: initial;
-}
-
-.custom-scroll-bar::-webkit-scrollbar, .custom-scroll-bar::-webkit-scrollbar-thumb 
-{
-	overflow: visible;
-	border-radius: 4px;
-	border: solid 1px #A6A6A6;
-	border-image: initial;
-}
-.custom-scroll-bar::-webkit-scrollbar-button 
-{
-	height: 0;
-	display: block;
-	background-color: transparent;
-}
+	.custom-scroll-bar::-webkit-scrollbar, .custom-scroll-bar::-webkit-scrollbar-thumb 
+	{
+		overflow: visible;
+		border-radius: 4px;
+		border: solid 1px #A6A6A6;
+		border-image: initial;
+	}
+	.custom-scroll-bar::-webkit-scrollbar, .custom-scroll-bar::-webkit-scrollbar-thumb 
+	{
+		overflow: visible;
+		border-radius: 4px;
+		border: solid 1px #A6A6A6;
+		border-image: initial;
+	}
+	.custom-scroll-bar::-webkit-scrollbar-button 
+	{
+		height: 0;
+		display: block;
+		background-color: transparent;
+	}
