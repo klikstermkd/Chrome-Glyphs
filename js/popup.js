@@ -16,7 +16,7 @@
 */
     var debug = true,
         cont = document.getElementById("container"),
-        copied = document.getElementById("copyied"),
+        copied = document.getElementById("copied"),
         clipboard = document.getElementById('clipboard'),
         dbGlyphs = JSON.parse(localStorage.getItem("glyphs"));
 
