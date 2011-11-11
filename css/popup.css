@@ -5,7 +5,9 @@ body
 }
 #container
 {
-	width:250px;
+	width:260px;
+	height:200px;
+	overflow:auto;
 }
 	#container ul
 	{
@@ -36,4 +38,35 @@ body
 	opacity:-1;
 	position:absolute;
 	z-index:-1;
+}
+
+.custom-scroll-bar::-webkit-scrollbar 
+{
+	width: 10px;
+	background: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(202, 202, 202, 0.07)),color-stop(100%,rgba(229, 229, 229, 0.07)));
+	background: -webkit-linear-gradient(left,rgba(202, 202, 202, 0.07) 0%,rgba(229, 229, 229, 0.07) 100%);
+	-webkit-box-shadow: 0 0 1px 0 rgba(0,0,0,.15) inset,0 1px 0 0 #fff;
+	box-shadow: 0 0 1px 0 rgba(0,0,0,.15) inset,0 1px 0 0 #fff;
+	background-color: #E5E5E5;
+}
+.custom-scroll-bar::-webkit-scrollbar, .custom-scroll-bar::-webkit-scrollbar-thumb 
+{
+	overflow: visible;
+	border-radius: 4px;
+	border: solid 1px #A6A6A6;
+	border-image: initial;
+}
+
+.custom-scroll-bar::-webkit-scrollbar, .custom-scroll-bar::-webkit-scrollbar-thumb 
+{
+	overflow: visible;
+	border-radius: 4px;
+	border: solid 1px #A6A6A6;
+	border-image: initial;
+}
+.custom-scroll-bar::-webkit-scrollbar-button 
+{
+	height: 0;
+	display: block;
+	background-color: transparent;
 }
