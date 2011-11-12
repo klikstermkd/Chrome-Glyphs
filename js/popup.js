@@ -35,6 +35,10 @@ function generate(glyphs)
         for(item in glyphs[cat])
         {
             li = document.createElement("li");
+            
+            // to do disable/enable from options
+            li.setAttribute('data-tooltip',glyphs[cat][item]);
+            
             li.innerHTML = glyphs[cat][item];
             
             li.addEventListener("click", function() // add event listener
