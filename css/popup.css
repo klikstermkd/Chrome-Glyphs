@@ -69,13 +69,6 @@ body
 		border: solid 1px #A6A6A6;
 		border-image: initial;
 	}
-	.custom-scroll-bar::-webkit-scrollbar, .custom-scroll-bar::-webkit-scrollbar-thumb 
-	{
-		overflow: visible;
-		border-radius: 4px;
-		border: solid 1px #A6A6A6;
-		border-image: initial;
-	}
 	.custom-scroll-bar::-webkit-scrollbar-button 
 	{
 		height: 0;
